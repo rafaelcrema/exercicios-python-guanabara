@@ -16,16 +16,16 @@ palpite = 0
 numero_pc = random.randint(1, 10)
 
 #condição de repetição do while
-escolha = -1
+escolha_jogador = -1
 
-while escolha != numero_pc:
+while escolha_jogador != numero_pc:
 
     escolha_jogador = int(input('Pense no número que eu pensei: '))
+    palpite +=1
 
     if escolha_jogador == numero_pc:
         print(f'Você acertou! O número era \033[32m{numero_pc}\033[m')
     else:
-        palpite +=1
         print('Você erro!')
         continue
 
