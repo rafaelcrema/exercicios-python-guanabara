@@ -29,7 +29,7 @@ cedula1= 0
 
 valor_sacar = int(input('Quanto você quer sacar? '))
 
-while True:
+while valor_sacar > 0:
 
     cedula = random.choice(lista_dinheiro)
 
