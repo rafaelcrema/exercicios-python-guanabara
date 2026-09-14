@@ -1,0 +1,36 @@
+'''
+crie um programa que leia nome, ano de nascimento e carteira de trabalho e cadastreos
+(com idade) em um dicionario sem por aceso a CTPS for diferente de zero, o dicionario recebera também o ano de contribuição e o salario.
+Calcule e acrescente alén da idade com quantos anos a pessoa vai se aposentar.
+'''
+
+print('==='*15)
+print('EXERCICIOS 92'.center(45))
+print('==='*15)
+print(' ')
+
+import datetime
+import sys
+
+cadastro = {}
+ano = datetime.date.today().year
+
+nome = input('Digite o nome: ').strip().capitalize()
+cadastro["nome"] = nome
+
+nasc = int(input('Digite seu ano de nascimento: '))
+idade = ano - nasc
+cadastro['idade'] = idade
+
+carteira = int(input('Digite a sua carteira de trabalho (0 não tem): '))
+if carteira == 0:
+    print('Vagabundo!')
+    sys.exit()
+
+ano_contribuicao = int(input('Digite o ano do seu primeiro trabalho: '))
+cadastro['ano de contribuição'] = ano_contribuicao
+
+salario = float(input('Digite o salario: '))
+cadastro['salario'] = salario
+
+print(cadastro)

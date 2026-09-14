@@ -16,38 +16,47 @@ matriz1 = list()
 matriz2 = list()
 matriz_par = list()
 
+#FOR PARA CRIAR MATRIZ
 for m1 in range(3):
     mz0 = int(input(f'Digite o valor da matriz 0,{m1}: '))
     matriz0.append(mz0)
+    #SEPARAR OS PARES EM UMA NOVA LISTA
     if mz0 % 2 == 0:
         matriz_par.append(mz0)
 
 for m2 in range(3):
     mz1 = int(input(f'Digite o valor da matriz 1,{m2}: '))
     matriz1.append(mz1)
+    #SEPARAR OS PARES EM UMA NOVA LISTA
     if mz1 % 2 == 0:
         matriz_par.append(mz1)
 
 for m3 in range(3):
     mz2 = int(input(f'Digite o valor da matriz 2,{m3}: '))
     matriz2.append(mz2)
+    #SEPARAR OS PARES EM UMA NOVA LISTA
     if mz2 % 2 == 0:
         matriz_par.append(mz2)
 
+#ALIMENTANDO A LISTA PRINCIPAL DA MATRIZ
 matriz.append(matriz0)
 matriz.append(matriz1)
 matriz.append(matriz2)
 
+#FOR PARA GERAR MO QUADRO DA MATRIZ
 print('-=-'*15)
 for n in matriz:
     for nz in n:
         print(f'[{nz}]',end='')
     print()
 
+#VERIFICAÇÕES DO EXERCICIOS
 sum_par = sum(matriz_par)
 sum_terc = sum(matriz2)
 maior = max(matriz1)
 
+
+#RESULTADOS SOLICITADOS
 print('-=-'*15)
 print(f'Os pares são:\n{matriz_par}')
 print(f'A soma dos pares da: {sum_par}')
@@ -56,5 +65,3 @@ print(f'A soma da terceira fileira da matriz é: {sum_terc}')
 print('-=-'*15)
 print(f'O maior valor da segunda fileira da matriz é: {maior}')
 print('-=-'*15)
-
-
