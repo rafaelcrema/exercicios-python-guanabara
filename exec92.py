@@ -33,4 +33,17 @@ cadastro['ano de contribuição'] = ano_contribuicao
 salario = float(input('Digite o salario: '))
 cadastro['salario'] = salario
 
-print(cadastro)
+aposenta_contri = 65 - idade
+ano_aposentado = ano + aposenta_contri
+ano_trabalho = ano - ano_contribuicao
+
+print('-=-'*30)
+
+if ano_trabalho < 20 and aposenta_contri < 65:
+    trabalho_restante = 20 - ano_trabalho
+    print(f'Faltam {trabalho_restante} anos de trabalho em carteira e mais {aposenta_contri} anos de trabalho')
+    print(f'Se não mudarem, você se aposenta em {ano_aposentado}')
+else:
+    print(f'Você já é aposentado, sai daqui!!!!')
+
+
