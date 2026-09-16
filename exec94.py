@@ -62,9 +62,11 @@ for pessoa in grupo_pessoas['Pessoas']:
     if pessoa[2] > med_idade:
         acima_med.append(pessoa[0])
 
-print(grupo_pessoas, quant,med_idade)
-print(quant)
-print(med_idade)
-print(mulheres)
-print(acima_med)
+print('-=-'*30)
+print(grupo_pessoas)
+print('-=-'*30)
+print(f'=> Foram cadastradas {quant} pessoas')
+print(f'=> A idade média é de {med_idade}')
+print(f'=> As mulheres dastradas foram: \n{mulheres}')
+print(f'=> As pessoas acima da média de idade são: \n{acima_med}')
    
