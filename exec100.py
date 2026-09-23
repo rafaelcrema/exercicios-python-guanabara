@@ -5,20 +5,22 @@ VAI MOSTRAR OS NÚMEROS PARES SORTEADOS PELA FUNÇÃO ANTERIOR
 '''
 
 print('==='*15)
-print('EXERCICIOS 100'.center(45))
+print('EXERCICIOS 100'.center(44))
 print('==='*15)
 print(' ')
 
 import random
+from time import sleep
 
-lista_numeros = []
-lista_par = []
-
-def sorteia():
-    for sorteia in random.sample(range(0,10),5):
+def sorteia(num):
+    for sorteia in num:
         lista_numeros.append(sorteia)
 
-    print(f'A lista sorteda é: \033[32m{lista_numeros}\033[m')
+    for n in lista_numeros:
+        print(f'\033[32m{n}\033[m',end=' ', flush=True)
+        sleep(0.2)
+
+    print(f'\nA lista sorteda é: \033[32m{lista_numeros}\033[m')
 
 def somapar():
     for par in lista_numeros:
@@ -27,7 +29,10 @@ def somapar():
     
     print(f'\nA lista par é \033[32m{lista_par}\033[m')
     soma = sum(lista_par)
-    print(f'A foma dos pares são: \033[32m{soma}\033[m')
+    print(f'A soma dos pares são: \033[32m{soma}\033[m')
 
-sorteia()
+
+lista_numeros = []
+lista_par = []
+sorteia(random.sample(range(0,100),random.randint(1,20)))
 somapar()
