@@ -53,11 +53,11 @@ def notas(*resp, sit=False):
     if sit == True:
         if media <= 10:
             geral.update({'Situação': 'Excelente'})
-        if media <=8:
+        elif media <=8:
             geral.update({'Situação': 'Boa'})
-        if media <= 6:
+        elif media <= 6:
             geral.update({'Situação': 'Mediana'})
-        if media <= 4:
+        elif media <= 4:
             geral.update({'Situação': 'RUIM'})
         
     return geral
