@@ -7,13 +7,13 @@ def cadastrar():
     #listacadastro.lista_cadastro.clear()
 
     print('==='*15)
-    print('CADASTRO DE PESSOA'.center(44))
+    print('\033[0;32mCADASTRO DE PESSOA\033[m'.center(53))
     print('==='*15)
     print()
 
     while True:
         while True:
-            nome = input('Digite o nome: ').capitalize().strip()
+            nome = input('Digite o nome: ').strip().capitalize()
             try:
                 if not nome.replace(' ','').isalpha():
                     raise ValueError
@@ -47,12 +47,12 @@ def cadastrar():
 def cadastrados():
 
     print('==='*15)
-    print('PESSOAS CADASTRADAS'.center(44))
+    print('\033[0;32mPESSOAS CADASTRADAS\033[m'.center(53))
     print('==='*15)
     print()
 
     for pessoa in listacadastro.lista_cadastro:
-        print(F'Nome: {pessoa['Nome']} Idade:{pessoa['Idade']}')
+        print(F'Nome: {pessoa['Nome']:.<30} Idade:{pessoa['Idade']}')
 
 
     

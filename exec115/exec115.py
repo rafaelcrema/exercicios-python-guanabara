@@ -18,14 +18,14 @@ listacadastro.carregar()
 
 while True:
     print('==='*15)
-    print('MENU PRINCIPAL'.center(44))
+    print('\033[0;32mMENU PRINCIPAL\033[m'.center(53))
     print('==='*15)
     print()
 
     escolha = input('''
-1- CADASTRAR PESSOA
-2- VERIFICAR LISTAS DE CADASTRO
-3- SAIR
+\033[0;33m1\033[m\033[0;34m -\033[m \033[0;32mCADASTRAR PESSOA\033[m
+\033[0;33m2\033[m\033[0;34m -\033[m \033[0;32mVERIFICAR LISTAS DE CADASTRO\033[m
+\033[0;33m3\033[m\033[0;34m -\033[m \033[0;32mSAIR\033[m
 ''')
 
     if escolha == '1':

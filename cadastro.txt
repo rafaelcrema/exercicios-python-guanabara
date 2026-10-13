@@ -1,3 +1,4 @@
 Rafael;35
-Pedro 54;43
+Pedro;43
 Tiago;34
+Thayse macena;28
